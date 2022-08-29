@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versiunea site-ului</title>
+    <link rel="stylesheet" href="maincss.css/style2.css">
+</head>
+<body>
+  <header>
+      <div id="logo" onclick="slowScroll('#top')">
+          <span>Instastyle</span>
+      </div>
+      <div id="about">
+          <a href="#" title="Servicii" onclick="slowScrolll('#main')">Servicii</a>
+          <a href="#" ondblclick="slowScroll ('#overview')" title="Despre mine">Despre mine</a>
+          <a href="#" onclick="slowScroll ('#portofoliu')" title="Portofoliu">Portofoliu</a>
+          <a href="#" onclick="slowScroll ('#contacts')" title="Contacte">Contacte</a>
+      </div>
+  </header>
+
+  <div id="top">
+      <h1> Stilist personal</h1>
+      <h2>Fashion blogger</h2>
+  </div>
+
+  <div id="main"> 
+      <div class="intro">
+          <h2>Creez garderobe stilate și funcționale!</h2>
+          <span>Servicii Offline/Online</span>
+      </div> 
+
+  <div class="text">
+    <span>✨Cu cât reducerile sunt mai mari, cu atât crește tentația de a cheltui în zadar bani și timp. Cum să evitam regretele de după?
+
+        ☑️Înainte de shopping (online/offline), trebuie să aveți lista pregătită cu articolele necesare. În drept cu fiecare articol, descrieți detaliat: materialul, croiala, cu accente/fără, până la o X sumă ș.m.d. </span>
+</div>
+</div>
+
+<div id="overview">
+    <h2>Avantaje</h2>
+    <h4>Totul e mai simplu decit crezi</h4>
+
+    <div class="img">
+        <img src="https://static.massimodutti.net/3/photos/2021/I/0/1/p/4774/555/712/4774555712_2_6_16.jpg" alt="">
+        <span>Analiza garderobei</span>
+    </div>
+    <div class="img">
+        <img src="https://www.styledemocracy.com/wp-content/uploads/2020/01/stores-like-zara-1.jpg" alt="">
+        <span>Servicii de selectie in timpul shopingului</span>
+    </div>
+    <div class="img">
+        <img src="https://media.gettyimages.com/photos/studio-shot-of-a-young-beautiful-woman-picture-id1287400271?s=170667a" alt="">
+        <span>Formarea capsulelor</span>
+    </div>
+    <div class="img">
+        <img src="https://smarandavornicu.ro/wp-content/uploads/2016/05/office-6.jpg" alt="">
+        <span>Ghid in pdf. “GARDEROBA DE BAZĂ”2022</span>
+    </div>
+</div>
+
+<div id="contacts">
+    <center><h5>Trimite un mesaj</h5></center>
+    <form id="form_input">
+        <label for="name">Nume<span>*</span></label><br>
+        <input type="text" placeholder="Nume Prenume" name="name" id="name"><br>
+        <label for="email">E-mail<span>*</span></label><br>
+        <input type="email" placeholder="exemple@mail.com" name="email" id="email"><br>
+        <label for="message">Mesaj<span>*</span></label><br>
+        <textarea placeholder="Scrie un mesaj" name="message" id="message"></textarea><br>
+        <div id="mess_send" class="btn">Trimite</div><br>
+    </form>
+</div>
+
+<div id="faq">
+    <div>
+        <span class="title">Analiza</span><br>
+        <span class="heading">Cum are loc analiza garderobei?</span>
+        <p>Procesul de analiza a garderobei poate avea loc online prin Google Meet, sau ofline la dvs. acasa. In procesul analizei este nevoie ca clienta sa imbarace hainele sale pentru a le analiza si crea mai usor tinute.</p>
+    </div>
+    <div>
+        <span class="title">Peste hotare</span><br>
+        <span class="heading">Veniti peste hotare ca consultant la shopping?</span>
+        <p>Exista posibilitatea de a oferi servicii de consultanta in procesul de shopping, insa costurile serviciilor vor fi influientate de tara/orasul in care urmeaza sa vin. Un avantaj ar fi sa se organizeze mai multe cliente din acelasi oras.</p>
+    </div>
+    <div>
+        <span class="title">Ghid</span><br>
+        <span class="heading">Vor mai fi si alte ghiduri?</span>
+        <p>Ghidul Garderobei de Baza este primul proiect, neaparat vor mai fi si alte ghiduri pe alte tematici, dar care la fel sa ramana actuale si dupa mult timp. In prezent deja lucrez la inca un ghid.</p>
+    </div>
+</div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+      function functionName (id) {
+          $('html, body').animate({
+             scrollTop: $(id).offset().top
+          },500); 
+      }
+      $(document).on("scroll", function () {
+        if($(window).scrollTop() ===0)
+        $("header").romoveClass("fixed");
+        else
+        $("header").attr("class" , "fixed");
+      });
+  </script>
+<div>
+<footer>
+    <span class="left" >Realizat de Vika &copy; 2022</span> 
+    <span class="right"></span>
+    <img src="img/instagram.png" alt="Instagram" title="Instagram"/>
+        <a href="https://www.instagram.com/instastyle.md/" target="_blank" alt="Instastyle" title="Instagram">Instastyle</a>
+    </span>
+    </footer>
+</div>
+</body>
+</html>
